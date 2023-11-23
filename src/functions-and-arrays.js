@@ -100,8 +100,18 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
-
+function uniquifyArray(arr) {
+  let newArray = [];
+  arr.forEach(function (plArr) {
+    if (newArray.indexOf(plArr) === -1) {
+      newArray.push(plArr);
+    }
+  });
+  if (arr.length === 0) {
+    newArray = null;
+  }
+  return newArray;
+}
 
 
 // Iteration #6: Find elements
